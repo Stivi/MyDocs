@@ -10,7 +10,6 @@
 >>> def init_start():
 	f.seek(0)
 	my_example_dict.clear()
-	my_example_dict['0'] = 'lol'
 
 >>> def cut_key_to_dict():
 	for line in f:
