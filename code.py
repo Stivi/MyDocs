@@ -7,11 +7,10 @@
 	print repr(dict).decode("unicode-escape")
 	print '-'*60
 
->>> def init_start():
+>>> def cut_key_to_dict():
+	# переходим в начало файла и обнуляем словарь
 	f.seek(0)
 	my_example_dict.clear()
-
->>> def cut_key_to_dict():
 	while 1:
 		line = f.readline()
 		if not line:
