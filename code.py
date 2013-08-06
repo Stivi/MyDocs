@@ -7,8 +7,10 @@
 	print repr(dict).decode("unicode-escape")
 	print '-'*60
 
->>> f.seek(0)
->>> my_example_dict = {}
+>>> def init_start():
+	f.seek(0)
+	my_example_dict = {}
+
 >>> for line in f:
 	# find – находит подстроку в строке – возвращает позицию вхождения строки, либо -1:
 	if line.find('[') == -1:
