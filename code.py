@@ -9,7 +9,8 @@
 
 >>> def init_start():
 	f.seek(0)
-	my_example_dict = {}
+	my_example_dict.clear()
+	my_example_dict['0'] = 'lol'
 
 >>> for line in f:
 	# find – находит подстроку в строке – возвращает позицию вхождения строки, либо -1:
