@@ -12,8 +12,11 @@
 	my_example_dict.clear()
 
 >>> def cut_key_to_dict():
-	for line in f:
-		# find – находит подстроку в строке – возвращает позицию вхождения строки, либо -1:
+	while 1:
+		line = f.readline()
+		if not line:
+			print 'выхожу из цикла'
+			break
 		if line.find('[') == -1:
 			print '1-й цикл - начало'
 			print 'Ключ не найден. Ожидается строка с ключем в начале.'
@@ -26,11 +29,6 @@
 			key = line[start_key:end_key]
 			print 'Сброс в словарь готового элемента'
 			my_example_dict[key] = line
-			print key
 			pretty(my_example_dict)
-			print 'Ключ найден. Начинаю новый элемент'
-			print line
 			print '2-й цикл - конец'
-
-
 
