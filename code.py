@@ -17,7 +17,7 @@
 		# find – находит подстроку в строке – возвращает позицию вхождения строки, либо -1:
 		if line.find('[') == -1:
 			print '1-й цикл - начало'
-			print 'Ключ не найден. Добавляю в словарь предыдущего элемента'
+			print 'Ключ не найден. Добавляю в список предыдущего элемента'
 			print line
 			print '1-й цикл - конец'
 		else:
@@ -25,6 +25,7 @@
 			start_key = line.find('[')
 			end_key = line.find(']') + 1
 			key = line[start_key:end_key]
+			print 'Сброс в словарь готового элемента'
 			my_example_dict[key] = line
 			print key
 			pretty(my_example_dict)
