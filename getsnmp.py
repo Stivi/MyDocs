@@ -19,7 +19,7 @@ def kyocera_status_print(devicename):
 
 
 def main():
-    give_status_print('msk-vps-prn3')
+    kyocera_status_print('msk-vps-prn3')
 
 
 if __name__ == '__main__':
