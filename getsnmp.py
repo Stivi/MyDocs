@@ -5,9 +5,8 @@ import subprocess
 
 
 def give_status_print():
-    keys = u'-v 1 -c public MSK-VPS-MFP 1.3.6.1.4.1.1347.43.18.2.1.2.1.1'
-    cmd = u'C:\\Users\\ssv\\Documents\\Programs\\net-snmp\\usr\\bin\\snmpget.exe'
-    cmd = cmd + ' ' + keys
+    args = [u'C:\\Users\\ssv\\Documents\\Programs\\net-snmp\\usr\\bin\\snmpget.exe', u'-O Tav -v 1 -c public', u'MSK-VPS-MFP', u'1.3.6.1.4.1.1347.43.18.2.1.2.1.1']
+    cmd = ' '.join(args)
     PIPE = subprocess.PIPE
     p = subprocess.Popen(cmd, shell=True, stdin=PIPE, stdout=PIPE, stderr=subprocess.STDOUT)
     while True:
@@ -16,6 +15,7 @@ def give_status_print():
         if not s:
             break
         print u,
+
 
 
 def new_func(mystring):
