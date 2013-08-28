@@ -16,14 +16,3 @@ def give_status_print(devicename):
         if not s:
             break
         print u,
-
-
-def new_func(mystring):
-    snmpbin = [u'dir', '/Q', '/N']
-    snmpbin.insert(1, mystring)
-    p = subprocess.Popen(snmpbin, shell=True, stdin=PIPE, stdout=PIPE, stderr=subprocess.STDOUT)
-    while True:
-        s = p.stdout.read()
-        if not s:
-            break
-        print s,
