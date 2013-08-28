@@ -16,3 +16,11 @@ def give_status_print(devicename):
         if not s:
             break
         print u,
+
+
+def main():
+    give_status_print('msk-vps-prn3')
+
+
+if __name__ == '__main__':
+    main()
