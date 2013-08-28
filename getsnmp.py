@@ -4,8 +4,9 @@ import sys
 import subprocess
 
 
-def give_status_print():
-    args = [u'C:\\Users\\ssv\\Documents\\Programs\\net-snmp\\usr\\bin\\snmpget.exe', u'-O Tav -v 1 -c public', u'MSK-VPS-MFP', u'1.3.6.1.4.1.1347.43.18.2.1.2.1.1']
+def give_status_print(devicename):
+    args = [u'C:\\Users\\ssv\\Documents\\Programs\\net-snmp\\usr\\bin\\snmpget.exe', u'-O Tav -v 1 -c public', u'1.3.6.1.4.1.1347.43.18.2.1.2.1.1']
+    args.insert(2, devicename)
     cmd = ' '.join(args)
     PIPE = subprocess.PIPE
     p = subprocess.Popen(cmd, shell=True, stdin=PIPE, stdout=PIPE, stderr=subprocess.STDOUT)
@@ -17,7 +18,6 @@ def give_status_print():
         print u,
 
 
-
 def new_func(mystring):
     snmpbin = [u'dir', '/Q', '/N']
     snmpbin.insert(1, mystring)
@@ -27,5 +27,3 @@ def new_func(mystring):
         if not s:
             break
         print s,
-
-
