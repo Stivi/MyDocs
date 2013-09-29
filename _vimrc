@@ -159,16 +159,6 @@ endfunction
 
 command! MySpeach call MySpeachFormat()
 
-
-nnoremap <Space> i<Space><Esc>
-
-"set ic!
-"set gfn=Calibri:h14:cDEFAULT
-"set fenc=utf-8
-"set encoding=utf-8
-"set wrap!
-"
-
 " key map problems in russian (vimLatex)
 imap <C-b> <Plug>Tex_MathBF
 imap <C-c> <Plug>Tex_MathCal
