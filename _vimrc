@@ -1,4 +1,5 @@
-﻿source $VIMRUNTIME/delmenu.vim
+" Меню на английском
+source $VIMRUNTIME/delmenu.vim
 set langmenu=none
 source $VIMRUNTIME/menu.vim
 
