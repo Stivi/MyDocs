@@ -83,11 +83,7 @@ set autoindent
 " Шрифт
 set guioptions=remgLt
 set guifont=DejaVu_Sans_Mono:h12:cRUSSIAN
-
-"set guifont=Consolas:h18:cRUSSIAN
-"set guifont=Consolas:h20:cRUSSIAN
 set printfont=Lucida_Console:h11:cRUSSIAN
-"set guifont=Courier_New:h12:cRUSSIAN
 
 " Цветовая схема
 "colorscheme darkblue
