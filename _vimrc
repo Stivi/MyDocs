@@ -82,10 +82,6 @@ set autoindent
 
 " Шрифт
 set guioptions=remgLt
-"set guifont=Lucida_Console:h14:cRUSSIAN
-"set guifont=Consolas:h14:cRUSSIAN
-"set guifont=Lucida_Console:h18:cRUSSIAN
-"set guifont=Consolas:h14:cRUSSIAN
 set guifont=DejaVu_Sans_Mono:h12:cRUSSIAN
 
 "set guifont=Consolas:h18:cRUSSIAN
