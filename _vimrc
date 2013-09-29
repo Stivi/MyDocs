@@ -182,8 +182,6 @@ nnoremap <Space> i<Space><Esc>
 "set encoding=utf-8
 "set wrap!
 "
-nnoremap <F6> "=strftime("%H:%M")<CR>P
-inoremap <F6> <C-R>=strftime("%H:%M")<CR>
 
 " key map problems in russian (vimLatex)
 imap <C-b> <Plug>Tex_MathBF
