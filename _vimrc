@@ -6,10 +6,11 @@ source $VIMRUNTIME/menu.vim
 " Отключение режима совместимости со старыми версиями
 set nocompatible
 
+set viewdir=$HOME/view
+
 "My key mappings
 source $HOME/mappings.vim
 source $HOME/functions.vim
-set viewdir=$HOME/view
 
 if version >= 700
     set history=64
@@ -29,17 +30,15 @@ set noswapfile
 " Размер истории командной строки
 set history=50
 
-" Линейка
+" Show the line and column number of the cursor position
 set ruler
 
 " Отображать команду в статусной строке
 set showcmd
 
-" Перенос длинных строк
 set wrap
-
-" Перенос целых слов
 set linebreak
+set textwidth=70
 
 " Номера строк
 set number
@@ -81,7 +80,7 @@ filetype plugin indent on
 set autoindent
 
 " Шрифт
-set guioptions=remgLt
+set guioptions=regLt
 set guifont=DejaVu_Sans_Mono:h12:cRUSSIAN
 set printfont=Lucida_Console:h11:cRUSSIAN
 
@@ -103,11 +102,7 @@ set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%0
 " Добавление клавиш Windows
 source $VIMRUNTIME/mswin.vim
 
-" Не ругаться на несохраненный буфер,
-" при переключении буферов
 set hidden
-
-set tw=70
 
 "More visual cursor
 set nocursorline
@@ -125,39 +120,3 @@ let g:html_number_lines = 0
 set guicursor=a:blinkon0
 
 set tabstop=4
-
-function! Serg()
-    silent! normal V
-endfunction
-
-command! FreemindText call Serg()
-
-" Разделяет абзацы"{{{
-function! MyFormatTextFunction()
-    silent! set tw=78
-    silent! %s/$/\r/g
-    silent! %s/^\n\+/\r/g
-    silent! normal gggwG
-    silent! %left 0
-endfunction
-
-command! MyFormatText call MyFormatTextFunction()
-"}}}
-
-" Прямая речь для латекса
-function! MySpeachFormat()
-    silent! %s/^-/"--*/g
-    silent! %s/ - / --- /g
-    silent! %s/ -$/ ---/g
-endfunction
-
-command! MySpeach call MySpeachFormat()
-
-" key map problems in russian (vimLatex)
-imap <C-b> <Plug>Tex_MathBF
-imap <C-c> <Plug>Tex_MathCal
-imap <C-l> <Plug>Tex_LeftRight
-imap <C-i> <Plug>Tex_InsertItemOnThisLine
-
-"set encoding=utf8
-"set fileencodings=utf8,cp1251

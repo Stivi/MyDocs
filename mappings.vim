@@ -74,3 +74,9 @@ nnoremap <Space> i<Space><Esc>
 
 "map <PageUp> <C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y>
 "map <PageDown> <C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E>
+
+" key map problems in russian (vimLatex)
+imap <C-b> <Plug>Tex_MathBF
+imap <C-c> <Plug>Tex_MathCal
+imap <C-l> <Plug>Tex_LeftRight
+imap <C-i> <Plug>Tex_InsertItemOnThisLine
