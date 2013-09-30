@@ -21,10 +21,7 @@ if version >= 700
     set undoreload=10000
 endif
 
-" Без резервных копий
 set nobackup
-
-" Без временного файла
 set noswapfile
 
 " Размер истории командной строки
