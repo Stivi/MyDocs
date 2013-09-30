@@ -86,13 +86,7 @@ set guifont=DejaVu_Sans_Mono:h12:cRUSSIAN
 set printfont=Lucida_Console:h11:cRUSSIAN
 
 " Цветовая схема
-"colorscheme darkblue
-"colorscheme gmt2
-"colorscheme ron
 colorscheme st
-"colorscheme default
-
-"colorscheme ron
 
 " Корректное распознавание русских букв
 set iskeyword=@,a-z,A-Z,48-57,_,168,184,128-175,192-255
