@@ -6,6 +6,7 @@ set mac="c:\Program Files\Monkey's Audio\MAC.exe"
 set mplayer="c:\Program Files\mplayer\mplayer.exe"
 
 CLS
+
 IF EXIST *.pk DEL *.pk
 
 FOR %%I IN (*.flac) DO (%flac% -d -F "%%I" && DEL "%%I")
