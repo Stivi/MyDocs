@@ -3,7 +3,6 @@ source $VIMRUNTIME/delmenu.vim
 set langmenu=none
 source $VIMRUNTIME/menu.vim
 
-" Отключение режима совместимости со старыми версиями
 set nocompatible
 
 set viewdir=$HOME/view
@@ -24,7 +23,6 @@ endif
 set nobackup
 set noswapfile
 
-" Размер истории командной строки
 set history=50
 
 " Show the line and column number of the cursor position
@@ -72,12 +70,10 @@ filetype plugin indent on
 " Автоотступ
 set autoindent
 
-" Шрифт
 set guioptions=regLt
 set guifont=DejaVu_Sans_Mono:h12:cRUSSIAN
 set printfont=Lucida_Console:h11:cRUSSIAN
 
-" Цветовая схема
 colorscheme st
 
 " Корректное распознавание русских букв
