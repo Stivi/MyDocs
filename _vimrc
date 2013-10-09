@@ -3,8 +3,6 @@ source $VIMRUNTIME/delmenu.vim
 set langmenu=none
 source $VIMRUNTIME/menu.vim
 
-set nocompatible
-
 set viewdir=$HOME/view
 
 "My key mappings
