@@ -1,7 +1,16 @@
+set encoding=utf-8
+language messages en
+
 " Меню на английском
 source $VIMRUNTIME/delmenu.vim
 set langmenu=none
 source $VIMRUNTIME/menu.vim
+
+" Включение поддержки русского языка
+set keymap=russian-jcukenwin
+set iminsert=0
+set imsearch=0
+highlight lCursor guifg=NONE guibg=Cyan
 
 set viewdir=$HOME/view
 
