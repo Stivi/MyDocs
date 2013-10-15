@@ -44,7 +44,7 @@ map <F7> S<b>
 map <Up> gk
 map <Down> gj
 
-map <F3> :set fileencoding=cp1251<CR>gqap{j :left 0<CR>gqip<Esc>:set fileencoding=utf-8<CR>
+map <F3> :set fileencoding=cp1251<CR>{j :left 0<CR>gqip<Esc>:set fileencoding=utf-8<CR>
 map <F10> ?
 map <F9> vipgw
 
