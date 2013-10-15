@@ -12,14 +12,8 @@ inoremap <F2>           <C-O>:update<CR>
 nmap <C-PageUP> :bnext!<CR>
 nmap <C-PageDown> :bprevious!<CR>
 
-"imap <F3> </<C-X><C-O><Esc>
-"nmap <F3> i</<C-X><C-O><Esc>
-
 nmap <F4> o<Esc>
 nmap <F5> gqap
-
-"nmap <C-w> :bd!<CR>
-"imap <C-w> :bd!<CR>
 
 map <MiddleMouse> z<CR>
 imap <MiddleMouse> z<CR>
@@ -71,9 +65,6 @@ vmap <C-Up> xkP`[V`]
 vmap <C-Down> xp`[V`]
 
 nnoremap <Space> i<Space><Esc>
-
-"map <PageUp> <C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y>
-"map <PageDown> <C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E>
 
 " key map problems in russian (vimLatex)
 imap <C-b> <Plug>Tex_MathBF
