@@ -46,6 +46,7 @@ map <Down> gj
 
 map <F3> :set fileencoding=cp1251<CR>{j :left 0<CR>gqip<Esc>:set fileencoding=utf-8<CR>
 map <F10> ?
+map <F11> :%s+++g<CR>
 map <F9> vipgw
 
 " по звездочке не прыгать на следующее найденное, а просто подсветить
