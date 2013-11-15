@@ -8,6 +8,14 @@ endfunction
 
 command! MySpeach call MySpeachFormat()
 
+
+" Delete all trailing whitespace (at the end of each line)
+function! DelWhiteSpaces()
+    silent! %s/\s\+$//
+endfunction
+
+command! DelWhiteSpace call DelWhiteSpaces()
+
 " Восстановление позиции окна
 au BufWinLeave *.* mkview
 au BufWinEnter *.* silent loadview
