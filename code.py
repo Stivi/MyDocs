@@ -4,10 +4,8 @@ f = codecs.open("ref.txt", "r", "utf-8")
 input_text = codecs.open("text.tex", "r", "utf-8")
 out_text = codecs.open("outme", "wb", "utf-8")
 
-###def pretty(dict):
-###     #print '-'*60
-###     print repr(dict).decode("unicode-escape")
-###     #print '-'*60
+def pretty(dict):
+     print repr(dict).decode("unicode-escape")
 
 def replace_all(text, dic):
     for i, j in dic.iteritems():
@@ -42,6 +40,7 @@ def push_to_file():
                         out_text.write(inputline)
                 else:
                         print 'выхожу из цикла'
+                        my_example_dict.clear()
                         out_text.close()
                         input_text.close()
                         break
