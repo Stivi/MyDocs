@@ -40,7 +40,7 @@ set showcmd
 
 set wrap
 set linebreak
-set textwidth=70
+set textwidth=0
 
 " Номера строк
 set number
