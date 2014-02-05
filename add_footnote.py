@@ -1,11 +1,19 @@
-﻿import sys, os, codecs
-#os.chdir('C:\\test')
+﻿# -*- coding: utf-8 -*-
+
+
+import sys
+import os
+import codecs
+
+os.chdir('C:\\test')
 f = codecs.open("ref.txt", "r", "utf-8")
 input_text = codecs.open("text.tex", "r", "utf-8")
 out_text = codecs.open("outme", "wb", "utf-8")
 
+
 def pretty(dict):
      print repr(dict).decode("unicode-escape")
+
 
 def replace_all(text, dic):
     for i, j in dic.iteritems():
@@ -13,6 +21,7 @@ def replace_all(text, dic):
     return text
 
 my_example_dict = {}
+
 
 def pull_to_dict():
         # переходим в начало файла и обнуляем словарь
@@ -30,6 +39,7 @@ def pull_to_dict():
                         end_key = line.find(']') + 1
                         key = line[start_key:end_key]
                         my_example_dict[key] = u'\\footnote{' + line.replace(str(key), '').strip() + u'}'
+
 
 def push_to_file():
         out_text.seek(0)
