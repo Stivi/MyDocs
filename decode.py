@@ -1,19 +1,15 @@
-﻿# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+
+# TODO Извлечь binary в файлы
 
 import sys, os, base64
 
-inputfile = open('input', 'r')
-outfile = open('out.jpg', 'wb')
+input = open('input', 'r')
+output = open('out.jpg', 'wb')
 
-base64.decode(inputfile, outfile)
+try:
+    base64.decode(input, output)
 
-inputfile.close()
-outfile.close()
-
-## Для  полной   уверенности  в  закрытии
-## файла можно использовать блок try/finally:
-## 
-##   try:
-##      # Тут идет запись в файл
-##   finally:
-##      file.close()
+finally:
+    input.close()
+    output.close()
