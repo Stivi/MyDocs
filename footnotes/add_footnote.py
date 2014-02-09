@@ -5,7 +5,7 @@ import sys
 import os
 import codecs
 
-os.chdir('C:\\test')
+os.chdir(os.getcwd())
 f = codecs.open("ref.txt", "r", "utf-8")
 input_text = codecs.open("text.tex", "r", "utf-8")
 out_text = codecs.open("outme", "wb", "utf-8")
