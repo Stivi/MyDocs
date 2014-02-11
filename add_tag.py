@@ -2,7 +2,7 @@ import os
 import re
 import codecs
 
-os.chdir('d:\\githa\\MyDocs')
+os.chdir(os.getcwd())
 
 
 def process_func():
