@@ -1,6 +1,6 @@
 @ECHO OFF
 
-set ffmpeg="C:\Users\ssv\Documents\Programs\ffmpeg-latest-win32-static\bin\ffmpeg.exe"
+set ffmpeg="%HOMEDRIVE%%HOMEPATH%\Documents\Programs\ffmpeg-latest-win32-static\bin\ffmpeg.exe"
 
 CLS
 
