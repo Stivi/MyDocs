@@ -39,7 +39,7 @@ map <F8> :emenu Encoding.<TAB>
 
 
 nnoremap <F6> "=strftime("%d %b %Y, %H:%M")<CR>Po
-map <F7> S<b>
+nnoremap <F7> "=strftime("%H:%M")<CR>Po
 
 map <Up> gk
 map <Down> gj
