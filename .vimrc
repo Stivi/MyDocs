@@ -137,8 +137,8 @@ set foldcolumn=0
 set formatprg=par\ -w70rjq
 
 let g:html_use_css=0
-let g:html_no_foldcolumn = 1
-let g:html_number_lines = 0
+let g:html_no_foldcolumn=1
+let g:html_number_lines=0
 
 " Disable blinking cursor
 set guicursor=a:blinkon0
