@@ -27,7 +27,13 @@ autocmd BufReadPost *
         \ endif
 
 " Commiting after save
-"BufWritePost * execute '! if [ -d .git ] || git rev-parse --git-dir > NUL 2>&1 ; then git add % ; git commit -m %; fi'
-autocmd BufWritePost *
-\   echo "the current path is" getcwd()
-""\   expand('<afile>:p:h').'/../'.expand('<afile>:t:r').'js'
+
+function! GitCommitAll()
+   if isdirectory(".git") != 0
+      echo "directory exist!" getcwd()
+   else
+      echo "get False" getcwd()
+   endif
+endfunction
+
+command! GitCommit call GitCommitAll()
