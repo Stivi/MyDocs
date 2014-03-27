@@ -28,7 +28,6 @@ autocmd BufReadPost *
 
 " Commiting after save
 "BufWritePost * execute '! if [ -d .git ] || git rev-parse --git-dir > NUL 2>&1 ; then git add % ; git commit -m %; fi'
-" BufWritePost *
-"         \ if isdirectory(.git)
-"         \      echo 'Directory .git exists'
-"         \ endif
+autocmd BufWritePost *
+\   echo "the value of 'shell' is" &shell
+"\   expand('<afile>:p:h').'/../'.expand('<afile>:t:r').'js'
