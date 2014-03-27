@@ -30,9 +30,9 @@ autocmd BufReadPost *
 
 function! GitCommitAll()
    if isdirectory(".git") != 0
-      echo "directory exist!" getcwd()
+      echo "directory exist!" isdirectory(".git")
    else
-      echo "get False" getcwd()
+      echo "get False" isdirectory(".git")
    endif
 endfunction
 
