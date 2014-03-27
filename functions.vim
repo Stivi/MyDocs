@@ -17,11 +17,18 @@ endfunction
 command! DelWhiteSpace call DelWhiteSpaces()
 
 " Восстановление позиции окна
-au BufWinLeave *.* mkview
-au BufWinEnter *.* silent loadview
+autocmd BufWinLeave *.* mkview
+autocmd BufWinEnter *.* silent loadview
 
 " Восстановление позиции курсора
 autocmd BufReadPost *
         \ if line("'\"") > 0 && line("'\"") <= line("$") |
         \      exe "normal g`\"" |
         \ endif
+
+" Commiting after save
+"BufWritePost * execute '! if [ -d .git ] || git rev-parse --git-dir > NUL 2>&1 ; then git add % ; git commit -m %; fi'
+" BufWritePost *
+"         \ if isdirectory(.git)
+"         \      echo 'Directory .git exists'
+"         \ endif
