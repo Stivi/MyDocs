@@ -12,15 +12,21 @@ def pretty(input_unicode_escape_obj):
      print repr(input_unicode_escape_obj).decode("unicode-escape")
 
 
+# прототип ф-ции
 def grab_text(enter_text):
+    enter_text.seek(0)
+    counter = 0
     while True:
         somestring = enter_text.readline()
         if not somestring:
-            print 'end of work'
+            print 'func_write_obj_with_paragraphs()'
             break
         if somestring.isspace():
-            print 'null line. current list append to full list, and clear. Maybe pass here'
+            counter += 1
+            print 'func_isspace()'
+            print counter
         else:
-            big_lol_test.append(somestring)
+            print 'func_add_paragraph()' + str(counter)
+            #big_lol_test.append(somestring)
 
 grab_text(input_text)
