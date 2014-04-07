@@ -23,8 +23,7 @@ def grab_text(enter_text):
             break
         if somestring.isspace():
             counter += 1
-            print 'func_isspace()'
-            print counter
+            print 'func_isspace()' + str(counter)
         else:
             print 'func_add_paragraph()' + str(counter)
             #big_lol_test.append(somestring)
