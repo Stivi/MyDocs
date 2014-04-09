@@ -4,7 +4,7 @@ import codecs
 
 input_text = codecs.open("maintext", "r", "utf-8")
 
-sample_list = [{1: []}]
+sample_list = [{1: [{u'cell_type': u'markdown', u'metadata': {}, u'source': []}]}]
 
 
 def pretty(input_unicode_escape_obj):
@@ -12,12 +12,11 @@ def pretty(input_unicode_escape_obj):
 
 
 def func_add_paragraph(num_string, input_string):
-    current_index = len(sample_list) - 1
-    print 'index_is ' + str(current_index)
+    current_index = len(sample_list)-1
     if num_string in sample_list[current_index]:
-        sample_list[current_index][num_string].append(input_string)
+        sample_list[current_index][num_string][0][u'source'].append(input_string)
     else:
-        sample_list.append({num_string: [input_string]})
+        sample_list.append({num_string: [{u'cell_type': u'markdown', u'metadata': {}, u'source': [input_string]}]})
 
 
 # прототип ф-ции
