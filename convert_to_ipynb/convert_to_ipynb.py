@@ -36,5 +36,11 @@ def grab_text(enter_text):
             func_add_paragraph(counter, somestring)
 
 
+def func_add_cells_to_worksheet():
+    for x in range(0, len(sample_list)):
+        print 'do something with sample_list, and add to source ' + str(x)
+
+
 grab_text(input_text)
 pretty(sample_list)
+func_add_cells_to_worksheet()
