@@ -2,6 +2,14 @@
 
 import codecs
 
+import json
+
+#загрузка
+data = json.load( open('realle_test_data.ipynb', 'r') )
+
+workshit = data['worksheets'][0]['cells']
+
+
 input_text = codecs.open("maintext", "r", "utf-8")
 
 sample_list = [{1: [{u'cell_type': u'markdown', u'metadata': {}, u'source': []}]}]
@@ -43,3 +51,6 @@ def func_add_cells_to_worksheet():
 grab_text(input_text)
 #pretty(sample_list)
 func_add_cells_to_worksheet()
+
+with open('123.ipynb', 'w') as outfile:
+    json.dump(data, outfile)
