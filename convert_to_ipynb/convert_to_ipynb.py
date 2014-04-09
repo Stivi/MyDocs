@@ -26,20 +26,20 @@ def grab_text(enter_text):
     while True:
         somestring = enter_text.readline()
         if not somestring:
-            print 'func_add_cells_to_worksheet()'
+            #print 'func_add_cells_to_worksheet()'
             break
         if somestring.isspace():
             counter += 1
-            print 'func_isspace()' + str(counter)
         else:
             func_add_paragraph(counter, somestring)
 
 
 def func_add_cells_to_worksheet():
-    for x in range(0, len(sample_list)):
-        print 'do something with sample_list, and add to source ' + str(x)
+    for index in range(0, len(sample_list)):
+        #print str(index) + ' ' + str(sample_list[index].keys()[0]) + ' 0'
+        workshit.append(sample_list[index][sample_list[index].keys()[0]][0])
 
 
 grab_text(input_text)
-pretty(sample_list)
+#pretty(sample_list)
 func_add_cells_to_worksheet()
