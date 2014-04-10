@@ -18,6 +18,16 @@ def func_add_paragraph(num_string, input_string):
         new_cells_list.append({num_string: [{u'cell_type': u'markdown', u'metadata': {}, u'source': [input_string]}]})
 
 
+def func_add_cells_to_worksheet():
+    for index in range(0, len(new_cells_list)):
+        worksheet.append(new_cells_list[index][new_cells_list[index].keys()[0]][0])
+
+
+def save_my_work():
+    with open('new_out.ipynb', 'w') as outfile:
+        json.dump(data, outfile)
+
+
 def grab_text(enter_text):
     enter_text.seek(0)
     counter = 0
@@ -25,6 +35,7 @@ def grab_text(enter_text):
         somestring = enter_text.readline()
         if not somestring:
             func_add_cells_to_worksheet()
+            save_my_work()
             break
         if somestring.isspace():
             counter += 1
@@ -32,13 +43,4 @@ def grab_text(enter_text):
             func_add_paragraph(counter, somestring)
 
 
-def func_add_cells_to_worksheet():
-    for index in range(0, len(new_cells_list)):
-        worksheet.append(new_cells_list[index][new_cells_list[index].keys()[0]][0])
-
-
 grab_text(input_text)
-
-
-with open('123.ipynb', 'w') as outfile:
-    json.dump(data, outfile)
