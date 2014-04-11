@@ -4,7 +4,13 @@ import codecs
 import json
 from sys import argv
 
-data = json.load( open('realle_test_data.ipynb', 'r') )
+data = {u'metadata': {u'name': u''},
+ u'nbformat': 3,
+ u'nbformat_minor': 0,
+ u'worksheets': [{u'cells': [{u'cell_type': u'markdown',
+                              u'metadata': {},
+                              u'source': []}],
+                  u'metadata': {}}]}
 
 script, input_file_name = argv
 input_text = codecs.open(input_file_name, "r", "utf-8")
