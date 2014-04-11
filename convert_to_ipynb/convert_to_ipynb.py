@@ -2,9 +2,12 @@
 
 import codecs
 import json
+from sys import argv
 
 data = json.load( open('realle_test_data.ipynb', 'r') )
-input_text = codecs.open("maintext", "r", "utf-8")
+
+script, input_file_name = argv
+input_text = codecs.open(input_file_name, "r", "utf-8")
 
 worksheet = data['worksheets'][0]['cells']
 new_cells_list = [{1: [{u'cell_type': u'markdown', u'metadata': {}, u'source': []}]}]
@@ -24,7 +27,7 @@ def func_add_cells_to_worksheet():
 
 
 def save_my_work():
-    with open('new_out.ipynb', 'w') as outfile:
+    with open(input_file_name + '.ipynb', 'w') as outfile:
         json.dump(data, outfile)
 
 
