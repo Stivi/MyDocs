@@ -39,7 +39,8 @@ map <F8> :emenu Encoding.<TAB>
 
 
 nnoremap <F6> "=strftime("%d %b %Y, %H:%M")<CR>Po
-nnoremap <F7> "=strftime("%H:%M")<CR>Po
+" keymap for Ledger
+nnoremap <F7> "=strftime("%Y/%m/%d")<CR>Po
 
 map <Up> gk
 map <Down> gj
