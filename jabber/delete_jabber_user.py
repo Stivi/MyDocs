@@ -18,8 +18,9 @@ while True:
         users_list.append(line)
 
 
-delete_user = "medvedev_vladimir_olegovich"
+delete_user = "timkina_irina_vladimirovna"
 
 for user in users_list:
-    print(" ejabberdctl delete-rosteritem " + user.strip() + " localhost " + delete_user.strip() + " localhost")
+    commands = " ejabberdctl delete-rosteritem " + user.strip() + " localhost " + delete_user.strip() + " localhost"
+    subprocess.call(commands, shell=True)
     print(' done for user: ' + user.strip())
