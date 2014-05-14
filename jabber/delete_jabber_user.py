@@ -1,6 +1,13 @@
 # -*- coding: utf-8 -*-
 
 import codecs
+import subprocess
+
+
+ls_output = subprocess.call('ejabberdctl registered-users localhost', shell=True, stderr=None)
+
+print(ls_output)
+
 
 f = codecs.open("users.txt", "r", "utf-8")
 
