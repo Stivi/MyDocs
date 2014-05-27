@@ -9,9 +9,9 @@ set lame="c:\Users\Sergey\Documents\Programs\lamemp3\lame3.99.5-64\lame.exe"
 CLS
 IF EXIST *.pk DEL *.pk
 
-echo Начало: > log
-echo %DATE% >> log
-echo %TIME% >> log
+echo Начало:> log
+echo %DATE%>> log
+echo %TIME%>> log
 
 FOR %%I IN (*.flac) DO (%flac% -d -F "%%I" && DEL "%%I")
 
@@ -23,6 +23,6 @@ FOR %%I IN (*.wav) DO (%oggenc% --quality 5 "%%I" && DEL "%%I")
 
 REM FOR %%I IN (*.wav) DO (%lame% -V 2 --noreplaygain "%%I" "%%I.mp3" && DEL "%%I")
 
-echo Конец: >> log
-echo %DATE% >> log
-echo %TIME% >> log
+echo Конец:>> log
+echo %DATE%>> log
+echo %TIME%>> log
