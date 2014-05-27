@@ -6,4 +6,4 @@ SET SIZE=-r 24000/1001 -s 320x180
 SET BITRATE=-bt 900k
 SET AOPTIONS=-acodec libvo_aacenc -ab 48k
 
-FOR %%I IN (*.mp4) DO (%FFMPEG% -i "%%I" %SIZE% %AOPTIONS% %VCODECOPTIONS% %BITRATE% -pass 1 outin.mp4)
+FOR %%I IN (*.mp4) DO (%FFMPEG% -t 00:30:05 -i "%%I" %SIZE% %AOPTIONS% %VCODECOPTIONS% %BITRATE% -pass 1 outin.mp4)
