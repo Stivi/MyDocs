@@ -145,8 +145,3 @@ let g:html_number_lines=0
 set guicursor=a:blinkon0
 
 set tabstop=4
-
-let g:netrw_cygwin = 0
-let g:netrw_ssh_cmd  = '"C:\Users\Sergey\Documents\Programs\Putty\PLINK.EXE" -batch -T -ssh'
-let g:netrw_scp_cmd  = '"C:\Users\Sergey\Documents\Programs\Putty\PSCP.EXE" -batch -q -scp'
-let g:netrw_sftp_cmd = '"C:\Users\Sergey\Documents\Programs\Putty\PSCP.EXE" -batch -q -sftp'
