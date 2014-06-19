@@ -1,0 +1,113 @@
+
+%\documentclass[a6paper,14pt]{extarticle}
+\documentclass[a6paper,12pt]{extarticle}
+
+%\usepackage{amssymb,amsfonts,amsmath,mathtext,cite,enumerate,float}
+%\usepackage{amsfonts}
+%\usepackage{skak}
+% шрифт как в ссср
+% заработал после http://kalina.lug.ru/wiki/Установка_комплекта_шрифтов_PSCyr_на_TeXLive_в_Ubuntu_9.04
+\usepackage{pscyr}
+\usepackage[utf8]{inputenc}
+%\usepackage[english=nohyphenation,russian=nohyphenation]{hyphsubst}
+\usepackage[english,russian]{babel}
+% Для поиска по русским буквам
+\usepackage{cmap}
+\usepackage{indentfirst}        % Отступ в первом абзаце.
+%%%%%
+\usepackage{geometry}           % способ ручной установки полей
+\geometry{top=0.5cm}            % поле сверху
+\geometry{bottom=1.25cm}        % поле снизу
+\geometry{left=0.2cm}           % поле справа
+\geometry{right=0.2cm}          % поле слева
+%%%%%
+%%%%% \linespread{0.95}
+%%%%%
+%%%%% \usepackage{wrapfig}
+%%%%%
+%%%%% \ifx\pdfoutput\undefined
+%%%%% \usepackage{graphicx}
+%%%%% \else
+%%%%% \usepackage[pdftex]{graphicx}
+%%%%% \fi
+%%%%%
+%%%%% \usepackage{textcomp}
+%%%%%
+%%%%% \renewcommand{\bfdefault}{b}
+%%%%% %\righthyphenmin=4 % Минимальное число символов при переносе - 2.
+%%%%% %\righthyphenmin=30 % Минимальное число символов при переносе - 2.
+%%%%%
+%%%%%
+%%%%% % LaTeX Paragraph Indenting
+%%%%% %\setlength{\parindent}{0pt}
+%%%%% %\setlength{\parskip}{1ex}
+%%%%%
+%%%%% \usepackage{parallel}
+%%%%%
+%%%%% % позволяет задавать цвет текста и фона,
+%%%%% % как отдельного блока, так и всего
+%%%%% % документа
+\usepackage[usenames,table]{xcolor}
+\definecolor{dark_purple}{HTML}{200020}
+\definecolor{myblue}{HTML}{00FFFF}
+\definecolor{newblue}{HTML}{0000FF}
+\definecolor{conjunctions}{HTML}{33B5E5}
+%%%%% % --------------------------------------
+%%%%% \newenvironment{answer}{%
+%%%%%   \bfseries
+%%%%%   \color{blue}
+%%%%% }{}
+%%%%% % --------------------------------------
+\color{white}
+%%%%%
+%%%%%
+%%%%% %\setlength{\parindent}{0pt}
+%%%%%
+%%%%% %\maketitle
+%%%%%
+%%%%% % Нумерация страниц выключена
+\pagestyle{empty}
+%%%%%
+\sloppy
+%%%%%
+%%%%% % Буквица
+%%%%% \usepackage{type1cm}
+%%%%% \usepackage{lettrine}
+%%%%%
+%%%%%
+%%%%%
+%%%%% % http://kuscsik.blogspot.ru/2008/03/how-to-background-image-in-latex.html
+%%%%% % in preamble
+%%%%%
+%%%%% %%% \usepackage{tikz}
+%%%%% %%% \usepackage{eso-pic}
+%%%%% %%% \newcommand\BackgroundPic{
+%%%%% %%% \put(0,20){
+%%%%% %%% \parbox[b][\paperheight]{\paperwidth}{%
+%%%%% %%% \vfill
+%%%%% %%% \centering
+%%%%% %%%
+%%%%% %%% \begin{tikzpicture}[rounded corners,ultra thick]
+%%%%% %%%   \shade[ball color=green] (9,.5) circle (.3cm);
+%%%%% %%% \end{tikzpicture}
+%%%%% %%%
+%%%%% %%% \vfill
+%%%%% %%% }}}
+%%%%%
+%%%%%
+\usepackage[protrusion=true,expansion=true]{microtype}
+\usepackage[T2A]{fontenc}
+%%%%%
+%%%%% % Создание гиперссылок. Пакет загружен последним,
+%%%%% % так как он переопределяет многие команды LaTeX.
+%%%%% %\usepackage{hyperref}
+%%%%% %\usepackage[unicode,bookmarks]{hyperref}
+%%%%% \usepackage[unicode,bookmarks,bookmarksnumbered,pdfborder={0 0 0}]{hyperref}
+%%%%%
+%%%%% %\usepackage{endnotes}
+%%%%% %\let\footnote=\endnote
+%%%%%
+%%%%% \usepackage[raggedright]{titlesec}
+%%%%%
+%%%%%
+%%%%% % vim: fdm=syntax
