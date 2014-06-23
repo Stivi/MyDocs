@@ -52,3 +52,6 @@ def process_func():
         else:
             subline = p.sub(r'\\textcolor{conjunctions}{\g<1>}', line)
             out_text.write(subline)
+
+
+process_func()
