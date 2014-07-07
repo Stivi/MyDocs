@@ -7,6 +7,8 @@ tree = ET.parse('test.fb2')
 root = tree.getroot()
 
 
+# https://docs.python.org/3/library/xml.etree.elementtree.html
+
 # Element  is  a  flexible   container  object  designed  to
 # store hierarchical  data structures  in memory. It  can be
 # described as a cross between a list and a dictionary. Each
@@ -34,3 +36,18 @@ root.attrib
 
 for child in root:
     print(child.tag, child.attrib)
+
+
+import io
+import base64
+
+
+for elem in root.getiterator('{http://www.gribuser.ru/xml/fictionbook/2.0}binary'):
+    input = io.StringIO()
+    input.write(elem.text)
+    pictname = elem.attrib.get("id")
+    output = open(pictname, 'wb')
+    input.seek(0)
+    base64.decode(input, output)
+    input.close()
+    output.close()
