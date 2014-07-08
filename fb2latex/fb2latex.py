@@ -34,6 +34,7 @@ for elem in root.getiterator('{http://www.gribuser.ru/xml/fictionbook/2.0}binary
     output.close()
 
 
-# Print whole tree with text
+# Print whole tree without binary
 for node in tree.iter():
-    print(node.tag, node.attrib, node.text)
+    if node.tag != '{http://www.gribuser.ru/xml/fictionbook/2.0}binary':
+        print(node.tag, node.attrib, node.text)
