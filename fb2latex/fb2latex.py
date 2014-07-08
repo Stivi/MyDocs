@@ -2,6 +2,10 @@
 
 # Lightweight XML support for Python.
 from xml.etree import ElementTree as ET
+import io
+import base64
+
+
 tree = ET.parse('test.fb2')
 
 root = tree.getroot()
@@ -19,10 +23,6 @@ for child in root:
     print(child.tag, child.attrib)
 
 
-import io
-import base64
-
-
 for elem in root.getiterator('{http://www.gribuser.ru/xml/fictionbook/2.0}binary'):
     input = io.StringIO()
     input.write(elem.text)
@@ -32,3 +32,8 @@ for elem in root.getiterator('{http://www.gribuser.ru/xml/fictionbook/2.0}binary
     base64.decode(input, output)
     input.close()
     output.close()
+
+
+# Print whole tree with text
+for node in tree.iter():
+    print(node.tag, node.attrib, node.text)
