@@ -20,11 +20,6 @@ else:
     print('Tree has not namespace URI')
 
 
-# As an Element, root has a tag and a dictionary of attributes
-root.tag
-root.attrib
-
-
 for child in root:
     print(child.tag, child.attrib)
 
@@ -44,3 +39,8 @@ for elem in root.getiterator(QName(uri, 'binary')):
 for node in tree.iter():
     if node.tag != QName(uri, 'binary'):
         print(node.tag, node.attrib, node.text)
+
+
+# Extracting text from nodes
+for elem in root.iter(QName(uri, 'title')):
+        print('\section{' + elem[0].text + '}')
