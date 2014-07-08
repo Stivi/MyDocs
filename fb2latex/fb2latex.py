@@ -1,17 +1,23 @@
 # -*- coding: utf-8 -*-
 
 # Lightweight XML support for Python.
+# https://docs.python.org/3/library/xml.etree.elementtree.html
 from xml.etree import ElementTree as ET
+from xml.etree.ElementTree import QName
 import io
 import base64
 
 
 tree = ET.parse('test.fb2')
-
 root = tree.getroot()
 
 
-# https://docs.python.org/3/library/xml.etree.elementtree.html
+# Simple get str with URI
+uri = ''
+if root.tag[0] == '{':
+    uri = root.tag[1:].split('}')[0]
+else:
+    print('Tree has not namespace URI')
 
 
 # As an Element, root has a tag and a dictionary of attributes
@@ -23,7 +29,7 @@ for child in root:
     print(child.tag, child.attrib)
 
 
-for elem in root.getiterator('{http://www.gribuser.ru/xml/fictionbook/2.0}binary'):
+for elem in root.getiterator(QName(uri, 'binary')):
     input = io.StringIO()
     input.write(elem.text)
     pictname = elem.attrib.get("id")
@@ -34,15 +40,7 @@ for elem in root.getiterator('{http://www.gribuser.ru/xml/fictionbook/2.0}binary
     output.close()
 
 
-# Simple get str with URI
-uri = ''
-if root.tag[0] == '{':
-    uri = root.tag[1:].split('}')[0]
-else:
-    print('Tree has not namespace URI')
-
-
 # Print whole tree without binary
 for node in tree.iter():
-    if node.tag != '{http://www.gribuser.ru/xml/fictionbook/2.0}binary':
+    if node.tag != QName(uri, 'binary'):
         print(node.tag, node.attrib, node.text)
