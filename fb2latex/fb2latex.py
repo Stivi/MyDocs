@@ -39,6 +39,8 @@ uri_set = set()
 if root.tag[0] == "{":
     uri, tag = root.tag[1:].split("}")
     uri_set.add(uri)
+else:
+    print('Tree has not namespace URI')
 
 
 # Print whole tree without binary
