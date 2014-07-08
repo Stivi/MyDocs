@@ -34,6 +34,13 @@ for elem in root.getiterator('{http://www.gribuser.ru/xml/fictionbook/2.0}binary
     output.close()
 
 
+# get unique namespace URI
+uri_set = set()
+if root.tag[0] == "{":
+    uri, tag = root.tag[1:].split("}")
+    uri_set.add(uri)
+
+
 # Print whole tree without binary
 for node in tree.iter():
     if node.tag != '{http://www.gribuser.ru/xml/fictionbook/2.0}binary':
