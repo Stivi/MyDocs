@@ -1,16 +1,16 @@
 #!/bin/bash
 
 
-function push_to_file {
-    echo push_to_file
+push_to_file() {
+    echo push_to_file $1
 }
 
 
-function work {
+work() {
     x=1
 	while [ $x -le 52 ]
 	do
-		echo "access.log.$x"
+		push_to_file access.log.$x
 		x=$(( $x + 1 ))
 	done
 }
