@@ -2,19 +2,17 @@
 
 
 push_to_file() {
-    echo push_to_file $1
+    cat $1 >> out.log
 }
 
 
 work() {
-    x=1
-	while [ $x -le 52 ]
-	do
-		push_to_file access.log.$x
-		x=$(( $x + 1 ))
+    counter=52
+	until [ $counter -lt 1 ]; do
+		push_to_file access.log.$counter
+		let counter-=1
 	done
 }
 
-#push_to_file
 
 work
