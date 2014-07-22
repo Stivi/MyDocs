@@ -21,12 +21,23 @@ real_names = ['accountcode',
          'userfield',
          'uniqueid']
 
+#TODO
+#1.Рисовать на графике отдельно внутренние, отдельно внешние (дата)
 names = pd.read_table('out.log', sep=',', header=None, names=real_names)
-
 names_without = names.drop(['accountcode', 'uniqueid'], axis=1)
 
-frame = DataFrame(names_without)
-tz_counts = frame['src'].value_counts()
-tz_counts[:20]
 
-tz_counts[:10].plot(kind='barh', rot=0)
+# An indication of what happened to the call.
+# This may be NO ANSWER, FAILED, BUSY, ANSWERED, or UNKNOWN.
+answer_counts = names_without['disposition'].value_counts()
+answer_counts[:10]
+
+
+# The last dialplan application that was executed.
+lastapp_counts = names_without['lastapp'].value_counts()
+lastapp_counts[:10]
+
+
+# The destination context for the call.
+dcontext_counts = names_without['dcontext'].value_counts()
+dcontext_counts[:10]
