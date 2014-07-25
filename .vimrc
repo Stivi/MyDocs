@@ -19,7 +19,7 @@ source $HOME/mappings.vim
 source $HOME/functions.vim
 
 if version >= 700
-    set history=64
+    set history=200
     set undolevels=128
     set undodir=$HOME/.vim/undodir/
     set undofile
@@ -29,8 +29,6 @@ endif
 
 set nobackup
 set noswapfile
-
-set history=50
 
 " Show the line and column number of the cursor position
 set ruler
