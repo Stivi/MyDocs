@@ -88,7 +88,7 @@ match Comment
 2match ErrorMsg /\s\+$/
 
 hi CursorLine cterm=NONE,underline guibg=#200020
-#hi Cursor guibg=#200020 guifg=NONE
+"hi Cursor guibg=#200020 guifg=NONE
 
 " Подсветка соответствий шаблону поиска
 set hlsearch
