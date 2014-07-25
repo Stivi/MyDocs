@@ -53,6 +53,7 @@ syntax on
 
 abbreviate li «
 abbreviate ri »
+abbreviate pu `` ''
 
 " При скорочтении полезно выделять союзы
 match Comment
