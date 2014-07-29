@@ -20,7 +20,6 @@ source $HOME/functions.vim
 
 if version >= 700
     set history=200
-    set undolevels=128
     set undodir=$HOME/.vim/undodir/
     set undofile
     set undolevels=1000
