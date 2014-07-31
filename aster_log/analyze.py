@@ -1,3 +1,6 @@
+import gzip
+aster_log = gzip.open('aste/Master.csv-20140727.gz', 'rb')
+
 from pandas import DataFrame, Series
 import pandas as pd
 %pylab inline
@@ -23,7 +26,7 @@ real_names = ['accountcode',
 
 #TODO
 #1.Рисовать на графике отдельно внутренние, отдельно внешние (дата)
-names = pd.read_table('out.log', sep=',', header=None, names=real_names)
+names = pd.read_table(aster_log, sep=',', header=None, names=real_names)
 names_without = names.drop(['accountcode', 'uniqueid'], axis=1)
 
 
