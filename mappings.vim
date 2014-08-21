@@ -38,7 +38,9 @@ menu Encoding.ibm-866           :e ++enc=ibm866<CR>
 map <F8> :emenu Encoding.<TAB>
 
 
-nnoremap <F6> "=strftime("%d %b %Y, %H:%M")<CR>Po
+"nnoremap <F6> "=strftime("%d %b %Y, %H:%M")<CR>Po
+nnoremap <F6> "=strftime("%Y/%m/%d %H:%M:%S")<CR>P
+imap <F6> <C-R>=strftime("%Y/%m/%d %H:%M:%S")<CR>
 " keymap for Ledger
 nnoremap <F7> "=strftime("%Y/%m/%d")<CR>Pa 
 
