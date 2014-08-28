@@ -22,92 +22,33 @@
 \geometry{right=0.2cm}          % поле слева
 
 \linespread{0.95}
-%%%%%
-%%%%% \usepackage{wrapfig}
-%%%%%
-%%%%% \ifx\pdfoutput\undefined
-%%%%% \usepackage{graphicx}
-%%%%% \else
-%%%%% \usepackage[pdftex]{graphicx}
-%%%%% \fi
-%%%%%
-%%%%% \usepackage{textcomp}
-%%%%%
-%%%%% \renewcommand{\bfdefault}{b}
-%%%%% %\righthyphenmin=4 % Минимальное число символов при переносе - 2.
-%%%%% %\righthyphenmin=30 % Минимальное число символов при переносе - 2.
-%%%%%
-%%%%%
-%%%%% % LaTeX Paragraph Indenting
-%%%%% %\setlength{\parindent}{0pt}
 \setlength{\parskip}{1ex}
-%%%%%
-%%%%% \usepackage{parallel}
-%%%%%
-%%%%% % позволяет задавать цвет текста и фона,
-%%%%% % как отдельного блока, так и всего
-%%%%% % документа
 \usepackage[usenames,table]{xcolor}
 \definecolor{dark_purple}{HTML}{200020}
 \definecolor{myblue}{HTML}{00FFFF}
 \definecolor{newblue}{HTML}{0000FF}
-\definecolor{conjunctions}{HTML}{33B5E5}
-\definecolor{texthah}{HTML}{FEFEFF}
-%%%%% % --------------------------------------
-%%%%% \newenvironment{answer}{%
-%%%%%   \bfseries
-%%%%%   \color{blue}
-%%%%% }{}
-%%%%% % --------------------------------------
+\definecolor{conjunctions}{HTML}{0000CD}
+\definecolor{texthah}{HTML}{000000}
 \color{texthah}
-%%%%%
-%%%%%
-%%%%% %\setlength{\parindent}{0pt}
-%%%%%
-%%%%% %\maketitle
-%%%%%
-%%%%% % Нумерация страниц выключена
 \pagestyle{empty}
-%%%%%
 \sloppy
-%%%%%
-%%%%% % Буквица
-%%%%% \usepackage{type1cm}
-%%%%% \usepackage{lettrine}
-%%%%%
-%%%%%
-%%%%%
-%%%%% % http://kuscsik.blogspot.ru/2008/03/how-to-background-image-in-latex.html
-%%%%% % in preamble
-%%%%%
-%%%%% %%% \usepackage{tikz}
-%%%%% %%% \usepackage{eso-pic}
-%%%%% %%% \newcommand\BackgroundPic{
-%%%%% %%% \put(0,20){
-%%%%% %%% \parbox[b][\paperheight]{\paperwidth}{%
-%%%%% %%% \vfill
-%%%%% %%% \centering
-%%%%% %%%
-%%%%% %%% \begin{tikzpicture}[rounded corners,ultra thick]
-%%%%% %%%   \shade[ball color=green] (9,.5) circle (.3cm);
-%%%%% %%% \end{tikzpicture}
-%%%%% %%%
-%%%%% %%% \vfill
-%%%%% %%% }}}
-%%%%%
-%%%%%
 \usepackage[protrusion=true,expansion=true]{microtype}
 \usepackage[T2A]{fontenc}
+
+\usepackage[perpage,symbol*]{footmisc}
+\DefineFNsymbolsTM*{wiley2}{
+  \textasteriskcentered *
+  {\textasteriskcentered\textasteriskcentered}{**}%
+  {\textasteriskcentered\textasteriskcentered\textasteriskcentered}{***}%
+  {\textasteriskcentered\textasteriskcentered\textasteriskcentered\textasteriskcentered}{****}%
+  {\textasteriskcentered\textasteriskcentered\textasteriskcentered\textasteriskcentered\textasteriskcentered}{*****}%
+  {\textasteriskcentered\textasteriskcentered\textasteriskcentered\textasteriskcentered\textasteriskcentered\textasteriskcentered}{******}%
+}%
+\setfnsymbol{wiley2}
 
 % Создание гиперссылок. Пакет загружен последним,
 % так как он переопределяет многие команды LaTeX.
 
 \usepackage[unicode,bookmarks,bookmarksnumbered,pdfborder={0 0 0}]{hyperref}
-%%%%%
-%%%%% %\usepackage{endnotes}
-%%%%% %\let\footnote=\endnote
-%%%%%
-%%%%% \usepackage[raggedright]{titlesec}
-%%%%%
-%%%%%
-%%%%% % vim: fdm=syntax
+
+% vim: fdm=syntax
