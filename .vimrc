@@ -121,9 +121,7 @@ set nolist
 "set listchars=eol:$,tab:»\ ,space:·
 "set lcs=eol:$,tab:»\ ,trail:·
 
-set laststatus=2
-"set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
-set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+set laststatus=0
 
 " Добавление клавиш Windows
 source $VIMRUNTIME/mswin.vim
