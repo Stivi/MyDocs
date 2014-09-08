@@ -1,5 +1,4 @@
 @ECHO OFF
-rem "it is a test"
 
 set ffmpeg="%HOMEDRIVE%%HOMEPATH%\Documents\Programs\ffmpeg-latest-win32-static\bin\ffmpeg.exe"
 
