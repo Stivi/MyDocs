@@ -1,3 +1,4 @@
+" go
 set encoding=utf-8
 language messages en
 
