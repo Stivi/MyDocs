@@ -4,7 +4,7 @@ import subprocess
 
 
 def kyocera_status_print(devicename):
-    """kyocera_status_print(' MSK-MENEDG-MFP1   ')"""
+    """kyocera_status_print('  MSK-MENEDG-MFP1   ')"""
     args = [u'C:\\Users\\ssv\\Documents\\Programs\\net-snmp\\usr\\bin\\snmpget.exe', u'-O Tav -v 1 -c public', u'1.3.6.1.4.1.1347.43.18.2.1.2.1.1']
     devicename = devicename.strip()
     devicename = unicode(devicename, 'cp1251')
