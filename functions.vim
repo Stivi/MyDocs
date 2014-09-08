@@ -25,15 +25,3 @@ autocmd BufReadPost *
         \ if line("'\"") > 0 && line("'\"") <= line("$") |
         \      exe "normal g`\"" |
         \ endif
-
-" Commiting after save
-
-function! GitCommitAll()
-   if isdirectory(".git") != 0
-      echo "directory exist!" isdirectory(".git")
-   else
-      echo "get False" isdirectory(".git")
-   endif
-endfunction
-
-command! GitCommit call GitCommitAll()
