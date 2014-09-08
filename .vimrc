@@ -117,9 +117,6 @@ set iskeyword=@,a-z,A-Z,48-57,_,168,184,128-175,192-255
 
 " Установка символов, которыми будет осуществляться подсветка
 set nolist
-"set list
-"set listchars=eol:$,tab:»\ ,space:·
-"set lcs=eol:$,tab:»\ ,trail:·
 
 set laststatus=0
 
