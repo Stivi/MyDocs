@@ -1,4 +1,5 @@
 @ECHO OFF
+rem 'hah'
 
 CLS
 
