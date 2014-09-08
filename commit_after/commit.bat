@@ -1,4 +1,4 @@
-rem c:
-cd "%HOMEDRIVE%%HOMEPATH%"
-git commit -a -m "current time"
-git push
+set root="%HOMEDRIVE%%HOMEPATH%"
+CD /D %root%
+call git commit -a -m "%DATE% %TIME%"
+call git push
