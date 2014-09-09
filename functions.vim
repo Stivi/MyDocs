@@ -1,4 +1,3 @@
-
 " Прямая речь для латекса
 function! MySpeachFormat()
     silent! %s+^-+"--*+g
