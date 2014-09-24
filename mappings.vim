@@ -3,9 +3,9 @@
 " Привязки к клавишам
 " ==========================
 
-noremap <F2>            :update<CR>
-vnoremap <F2>           <C-C>:update<CR>
-inoremap <F2>           <C-O>:update<CR>
+noremap <F2>            :update!<CR>
+vnoremap <F2>           <C-C>:update!<CR>
+inoremap <F2>           <C-O>:update!<CR>
 
 " Переключение буферов по
 " Ctrl+PgUP,PageDown
