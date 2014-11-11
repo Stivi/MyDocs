@@ -1,4 +1,4 @@
-# How working with my rep
+# How to working with my rep
 
 ##1 Create a new remote branch
 
