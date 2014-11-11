@@ -1,4 +1,7 @@
+# How working with my rep
+
 1 Create a new remote branch
+
 git clone git@github.com:Stivi/MyDocs.git
 cd MyDocs
 git checkout -b [name-of-branch]
