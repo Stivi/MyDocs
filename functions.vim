@@ -15,6 +15,13 @@ endfunction
 
 command! DelWhiteSpace call DelWhiteSpaces()
 
+
+function! Time()
+    silent! e! ~\bucket\ledger\time.txt
+endfunction
+
+command! Time call Time()
+
 " Восстановление позиции окна
 autocmd BufWinLeave *.* mkview
 autocmd BufWinEnter *.* silent loadview
@@ -24,3 +31,5 @@ autocmd BufReadPost *
         \ if line("'\"") > 0 && line("'\"") <= line("$") |
         \      exe "normal g`\"" |
         \ endif
+
+
