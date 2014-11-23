@@ -2,7 +2,7 @@
 
 Original: http://gunkies.org/wiki/Installing_RT-11_5.3_on_SIMH
 
-“’””À… 
+—Ä—É—Å—Å–∫–∏–π
 
 The installation manuals for RT-11 on bitsavers can be a bit scary and
 longwinding, but installing RT-11 can be done quickly in emulation nowadays.
