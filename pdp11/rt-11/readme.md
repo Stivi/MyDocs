@@ -11,9 +11,8 @@ longwinding, but installing RT-11 can be done quickly in emulation nowadays.
 
 Get an empty RL02 disk image where your installation will live.
 
+```
 wget --no-check-certificate https://dl.dropboxusercontent.com/u/16445500/simh/rt-11/rl02.dsk.gz
-
 gunzip rl02.dsk.gz
-
 cp rl02.dsk rl0.dsk
-
+```
