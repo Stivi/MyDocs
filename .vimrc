@@ -1,6 +1,8 @@
 set encoding=utf-8
 language messages en
 
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+
 " Меню на английском
 source $VIMRUNTIME/delmenu.vim
 set langmenu=none
