@@ -26,3 +26,8 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+
+for f in arg_list:
+    print (f).strip(), ':',
+    kyocera_status_print(f)
